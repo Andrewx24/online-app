@@ -1,15 +1,14 @@
 'use client';
-import { useState } from "react";
+import { useState } from 'react';
 
-
-const  SearchBar =()=> {
+const SearchBar = () => {
   const [query, setQuery] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle the search logic here (e.g., redirect to a search results page or filter a list)
     console.log('Searching for:', query);
