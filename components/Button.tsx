@@ -10,6 +10,9 @@ const Button = () => {
 
   const handleDecrease = () => {
     setCount(count - 1);
+    if (count === -10) {
+      setCount(0);
+    }
   };
 
   return (

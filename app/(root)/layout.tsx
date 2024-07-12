@@ -1,3 +1,4 @@
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
@@ -14,8 +15,8 @@ export default function RootLayout({
         <body>
         <Header/> 
         <SearchBar/>
-     
-        {children}
+    
+       {children}
        
         <Footer/>
         </body>

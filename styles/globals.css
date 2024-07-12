@@ -16,6 +16,21 @@
     @apply inline-block px-4 py-2 text-white bg-blue-500 rounded;
   }
   .btn:hover {
-    @apply bg-blue-600;
+    @apply bg-yellow-400;
   }
+  .new {
+    @apply text-4xl;
+  }
+}
+
+#menu-toggle:checked ~ #mobile-menu {
+  display: block;
+}
+
+#menu-toggle:checked ~ label #menu-open {
+  display: none;
+}
+
+#menu-toggle:checked ~ label #menu-close {
+  display: block;
 }

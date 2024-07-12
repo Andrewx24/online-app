@@ -1,12 +1,11 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-  <footer className='bg-gray-800 p-4 shadow-inner'>
-    <div className='container mx-auto flex justify-start items-tsart text-white'>
-     <div className='flex space-x-4'>
+    <footer className='bg-gray-800 p-4 shadow-inner'>
+      <div className='container mx-auto flex flex-col sm:flex-row justify-between items-center text-white'>
         <Link href='/' passHref>
           <Image 
             src='/logo.png' 
@@ -16,15 +15,12 @@ const Footer = () => {
             className='hover:text-blue-500 transition-colors duration-300 cursor-pointer'
           />
         </Link>
-        <div className='text-lg'>
+        <div className='mt-4 sm:mt-0 text-lg text-center sm:text-left'>
           &copy; 2024 My Website
-          </div>
+        </div>
       </div>
-    </div>
-
-
-  </footer>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
