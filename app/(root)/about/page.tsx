@@ -9,8 +9,13 @@ const lists = [
   { id: 4, name: 'Andrew' }
 ];
 
+interface StarWarsCharacter { 
+  name: string;
+  height: string; // Changed from number to string
+}
+
 export default function About() {
-  const [starWarsCharacter, setStarWarsCharacter] = useState(null);
+  const [starWarsCharacter, setStarWarsCharacter] = useState<StarWarsCharacter | null>(null);
 
   useEffect(() => {
     fetch('https://swapi.dev/api/people/1/')
