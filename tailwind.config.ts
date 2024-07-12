@@ -6,13 +6,14 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./styles/**/*.{js,ts,jsx,tsx,mdx}",
-    
+   
   ],
   theme: {
     extend: {
       colors:{
         primary: "#efefef",
-        secondary:"#eadede"
+        secondary:"#eadede",
+        third:"#b0ffd6"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
