@@ -10,8 +10,7 @@ const lists = [
 ];
 
 interface StarWarsCharacter { 
-  
-  character: string;
+  name: string;
   height: string; // Changed from number to string
 }
 
@@ -43,7 +42,7 @@ export default function About() {
         <h2 className="text-2xl font-semibold mb-4 text-gray-700">Star Wars Character</h2>
         <ul className="list-disc list-inside">
           {starWarsCharacter ? (
-            <li key={starWarsCharacter.character} className="text-lg text-gray-600">{starWarsCharacter.character}</li>
+            <li key={starWarsCharacter.name} className="text-lg text-gray-600">{starWarsCharacter.name}</li>
           ) : (
             <li className="text-lg text-gray-600">Loading...</li>
           )}
