@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaShoppingCart } from "react-icons/fa";
 import MobileNavbar from './MobileNavbar';
-
+import Searchbar from '@/components/search/Searchbar'
 const Header = () => {
   return (
     <header>
@@ -31,7 +31,10 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="flex items-end mt-4 lg:mt-0">
+          <div>
+           <Searchbar/>
+          </div>
+         <div className="flex items-end mt-4 lg:mt-0">
             <Link href="/sign-in" passHref>
               <span className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
                 Sign In
