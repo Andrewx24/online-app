@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaShoppingCart } from "react-icons/fa";
+import MobileNavbar from './MobileNavbar';
 
 const Header = () => {
   return (
@@ -43,7 +44,8 @@ const Header = () => {
             </Link>
           </div>
         </div>
-      </nav>
+     </nav>
+     <MobileNavbar/>
     </header>
   );
 }

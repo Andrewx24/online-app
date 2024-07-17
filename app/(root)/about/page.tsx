@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-
+import AddLists from '@/components/AddLists';
 const names = ['John', 'Paul', 'George', 'Ringo'];
 const lists = [
   { id: 1, name: 'john' },
@@ -47,7 +47,8 @@ export default function About() {
             <li className="text-lg text-gray-600">Loading...</li>
           )}
         </ul>
-      </div>
+     </div>
+     <AddLists/>
     </main>
   );
 }
