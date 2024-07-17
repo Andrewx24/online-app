@@ -13,7 +13,47 @@ export default function Home() {
      <button className="btn" > Hello !</button>
      <button className="btn hover:bg-blue-800 new" > Hello  Again!</button>
 
-     <Pathname/>
+     <Pathname/> 
+     <section className="flex flex-wrap justify-center items-center">
+
+      <div className="w-1/2">
+        <Image
+          src="/logo.png"
+          alt="coffee"
+          width={300}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+      <div className="w-1/2">
+        <Image
+          src="/logo.png"
+          alt="coffee"
+          width={300}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+      <div className="w-1/2">
+        <Image
+          src="/logo.png"
+          alt="coffee"
+          width={300}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+      <div className="w-1/2">
+        <Image
+          src="/logo.png"
+          alt="coffee"
+          width={300}
+          height={300}
+          layout="responsive"
+        />
+      </div>
+     </section>
+
     </main>
   );
 }
