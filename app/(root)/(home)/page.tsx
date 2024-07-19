@@ -2,7 +2,6 @@ import Image from "next/image";
 import Button from "@/components/Button"
 
 
-import Pathname from "@/components/Pathname";
 
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
      <button className="btn" > Hello !</button>
      <button className="btn hover:bg-blue-800 new" > Hello  Again!</button>
 
-     <Pathname/> 
+     
      
 
     </main>
