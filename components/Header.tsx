@@ -1,9 +1,11 @@
+// components/Header.js
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaShoppingCart } from "react-icons/fa";
 import MobileNavbar from './MobileNavbar';
-import Searchbar from '@/components/search/Searchbar'
+import Searchbar from '@/components/search/Searchbar';
+
 const Header = () => {
   return (
     <header>
@@ -13,7 +15,7 @@ const Header = () => {
             <Link href="/">
               <Image src="/logo.png" alt="logo" width={50} height={50} />
             </Link>
-            <div className="flex flex-wrap mx-4">
+            <div className="hidden lg:flex flex-wrap mx-4">
               <Link href="/" className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
                 Home
               </Link>
@@ -31,10 +33,10 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div>
-           <Searchbar/>
+          <div className="hidden lg:block">
+            <Searchbar />
           </div>
-         <div className="flex items-end mt-4 lg:mt-0">
+          <div className="hidden lg:flex items-end mt-4 lg:mt-0">
             <Link href="/sign-in" passHref>
               <span className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
                 Sign In
@@ -46,12 +48,15 @@ const Header = () => {
               </span>
             </Link>
           </div>
+          <div className="lg:hidden">
+            <MobileNavbar />
+          </div>
         </div>
-     </nav>
-     <MobileNavbar/>
+      </nav>
     </header>
   );
 }
 
 export default Header;
+
 
