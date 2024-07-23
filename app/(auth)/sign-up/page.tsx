@@ -4,9 +4,9 @@ export default function SignUp() {
      <h1> Sign Up Page Online Coffee Shop</h1>
      <form>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
+        <input type="email" id="email" required />
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" />
+        <input type="password" id="password"  required/>
         <button type="submit">Sign Up</button>
 
 
