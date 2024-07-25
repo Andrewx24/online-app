@@ -18,7 +18,7 @@ export default function Home() {
           <p className="text-lg max-w-2xl mx-auto mb-6">
             Tech Brew Coffee is a startup dedicated to combining the best of technology and coffee. We source the finest beans and use innovative brewing techniques to bring you a perfect cup every time.
           </p>
-          <Image src="/mnt/data/An_image_of_a_modern_coffee_shop_interior_with_a_t.png" alt="Tech Brew Coffee" width={600} height={400} className="mx-auto rounded-lg shadow-lg" />
+          <Image src="/path-to-your-about-image.jpg" alt="Tech Brew Coffee" width={600} height={400} className="mx-auto rounded-lg shadow-lg" />
         </div>
       </section>
 
