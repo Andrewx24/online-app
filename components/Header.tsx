@@ -1,4 +1,3 @@
-// components/Header.js
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +7,7 @@ import Searchbar from '@/components/search/Searchbar';
 
 const Header = () => {
   return (
-    <header>
+    <header className="fixed top-0 left-0 w-full z-50">
       <nav className="bg-gray-800 p-4 shadow-md">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="flex items-center">
@@ -37,15 +36,11 @@ const Header = () => {
             <Searchbar />
           </div>
           <div className="hidden lg:flex items-end mt-4 lg:mt-0">
-            <Link href="/sign-in" passHref>
-              <span className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
-                Sign In
-              </span>
+            <Link href="/sign-in" className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
+              Sign In
             </Link>
-            <Link href="/sign-up" passHref>
-              <span className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
-                Sign Up
-              </span>
+            <Link href="/sign-up" className="text-white mx-2 hover:text-blue-500 transition-colors duration-300">
+              Sign Up
             </Link>
           </div>
           <div className="lg:hidden">
@@ -58,5 +53,6 @@ const Header = () => {
 }
 
 export default Header;
+
 
 

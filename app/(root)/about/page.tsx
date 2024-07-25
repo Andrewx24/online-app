@@ -1,62 +1,61 @@
-import AddLists from '@/components/AddLists';
+import React from 'react';
+import Image from 'next/image';
 
-
-const names = ['John', 'Paul', 'George', 'Ringo'];
-const lists = [
-  { id: 1, name: 'john' },
-  { id: 2, name: 'Paul' },
-  { id: 3, name: 'George' },
-  { id: 4, name: 'Andrew' }
-];
-
-interface StarWarsCharacter { 
-  name: string;
-  height: string; // Changed from number to string
-}
-
-async function fetchStarWarsCharacter() {
-  try {
-    const response = await fetch('https://swapi.dev/api/people/1/');
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data: StarWarsCharacter = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Failed to fetch Star Wars character:', error);
-    return null; // Fallback to null if fetch fails
-  }
-}
-
-export default async function About() {
-  const starWarsCharacter = await fetchStarWarsCharacter();
-
+const AboutPage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gray-100">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">About Page Online Coffee Shop</h1>
-      <div className="w-full max-w-4xl">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-700">Names List</h2>
-        <ul className="list-disc list-inside mb-8">
-          {names.map((name) => (
-            <li key={name} className="text-lg text-gray-600">{name}</li>
-          ))}
-        </ul>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-700">Lists</h2>
-        <ul className="list-disc list-inside mb-8">
-          {lists.map((list) => (
-            <li key={list.id} className="text-lg text-gray-600">{list.name}</li>
-          ))}
-        </ul>
-        <h2 className="text-2xl font-semibold mb-4 text-gray-700">Star Wars Character</h2>
-        <ul className="list-disc list-inside">
-          {starWarsCharacter ? (
-            <li key={starWarsCharacter.name} className="text-lg text-gray-600">{starWarsCharacter.name}</li>
-          ) : (
-            <li className="text-lg text-gray-600">Loading...</li>
-          )}
-        </ul>
-     </div>
-     <AddLists/>
-    </main>
+    <div className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-blue-600 text-white py-20">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">About Us</h1>
+          <p className="text-lg mb-6">Learn more about our team and mission.</p>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-6">
+            Our mission is to provide the best services to our customers with dedication and passion. We aim to bring innovation and creativity to everything we do.
+          </p>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">Meet the Team</h2>
+          <div className="flex flex-wrap justify-center">
+            {/* Team Member */}
+            <div className="w-full md:w-1/3 lg:w-1/4 p-4">
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <Image src="/team-member-1.jpg" alt="Team Member 1" width={150} height={150} className="rounded-full mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">John Doe</h3>
+                <p className="text-gray-700">CEO</p>
+              </div>
+            </div>
+            {/* Team Member */}
+            <div className="w-full md:w-1/3 lg:w-1/4 p-4">
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <Image src="/team-member-2.jpg" alt="Team Member 2" width={150} height={150} className="rounded-full mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Jane Smith</h3>
+                <p className="text-gray-700">CTO</p>
+              </div>
+            </div>
+            {/* Team Member */}
+            <div className="w-full md:w-1/3 lg:w-1/4 p-4">
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <Image src="/team-member-3.jpg" alt="Team Member 3" width={150} height={150} className="rounded-full mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Alice Brown</h3>
+                <p className="text-gray-700">CFO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
+
+export default AboutPage;
