@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AboutPage = () => {
   return (
@@ -29,11 +30,13 @@ const AboutPage = () => {
           <div className="flex flex-wrap justify-center">
             {/* Team Member */}
             <div className="w-full md:w-1/3 lg:w-1/4 p-4">
-              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                <Image src="/team-member-1.jpg" alt="Team Member 1" width={150} height={150} className="rounded-full mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">John Doe</h3>
-                <p className="text-gray-700">CEO</p>
-              </div>
+              <Link href="/about/ceo">
+                <div className="bg-gray-200 p-6 rounded-lg shadow-lg cursor-pointer">
+                  <Image src="/team-member-1.jpg" alt="Team Member 1" width={150} height={150} className="rounded-full mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">John Doe</h3>
+                  <p className="text-gray-700">CEO</p>
+                </div>
+              </Link>
             </div>
             {/* Team Member */}
             <div className="w-full md:w-1/3 lg:w-1/4 p-4">
@@ -59,3 +62,4 @@ const AboutPage = () => {
 }
 
 export default AboutPage;
+
